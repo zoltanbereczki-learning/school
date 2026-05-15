@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning School</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="landing-shell">
+      <div class="landing-stage">
+        <header class="landing-header">
+          <div class="landing-brand">
+            <div class="landing-logo" aria-hidden="true">★</div>
+            <div>
+              <h1>Learning School</h1>
+              <p>Tanulj játékosan!</p>
+            </div>
+          </div>
+          <div class="learner-chip" id="learner-chip">
+            <span id="chip-name">Név</span>
+            <button type="button" id="open-name" aria-label="Név módosítása">✎</button>
+          </div>
+        </header>
+
+        <section class="hero-card">
+          <h2>Üdv a tanulószobában!</h2>
+          <p>Válassz egy tantárgyat. Minden lecke külön kaland — kezdjük a román szavakkal.</p>
+          <p class="hero-greeting" id="hero-greeting" hidden>Szia! 👋</p>
+        </section>
+
+        <section class="app-grid" aria-label="Tantárgyak">
+          <button type="button" class="app-card romanian" data-app="romanian">
+            <img class="app-card-cover" src="Images/Padure.png" alt="" />
+            <div class="app-card-body">
+              <span class="app-badge">Elérhető</span>
+              <h3>Tanulj Románul</h3>
+              <p>Román szókaland — erdő, közlekedés, állatok és több.</p>
+            </div>
+          </button>
+
+          <article class="app-card math is-soon" aria-disabled="true">
+            <img class="app-card-cover" src="Images/Semafor.png" alt="" />
+            <div class="app-card-body">
+              <span class="app-badge">Hamarosan</span>
+              <h3>Matekész</h3>
+              <p>Számolás és feladatok — még készülőben.</p>
+            </div>
+          </article>
+        </section>
+
+        <footer class="landing-footer">
+          <p>Készült otthoni tanuláshoz — magyarul vezetve, románul gyakorolva.</p>
+        </footer>
+      </div>
+    </main>
+
+    <div class="name-dialog" id="name-dialog" hidden role="dialog" aria-modal="true" aria-labelledby="name-dialog-title">
+      <div class="name-dialog-card">
+        <h2 id="name-dialog-title">Hogy hívnak?</h2>
+        <p>Írd be a neved — a tetején látni fogod tanulás közben.</p>
+        <input
+          class="name-input"
+          id="learner-input"
+          type="text"
+          maxlength="24"
+          autocomplete="nickname"
+          placeholder="pl. Hunor"
+        />
+        <div class="name-actions">
+          <button type="button" class="pill" id="save-name">Mehet!</button>
+          <button type="button" class="ghost-button" id="skip-name">Később</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

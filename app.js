@@ -221,8 +221,22 @@ const lessons = [
 ];
 
 const app = document.querySelector("#app");
+const LEARNER_NAME_KEY = "learningSchool.learnerName";
 const colors = ["#ff6b6b", "#ffd166", "#22c55e", "#0ea5e9", "#a855f7", "#f472b6", "#fb923c"];
 const MATCH_BATCH_SIZE = 5;
+
+function learnerName() {
+  try {
+    return (localStorage.getItem(LEARNER_NAME_KEY) || "").trim();
+  } catch {
+    return "";
+  }
+}
+
+function learnerGreeting() {
+  const name = learnerName();
+  return name ? `Szia, ${name}!` : "";
+}
 
 const state = {
   screen: "lessons",
@@ -571,10 +585,21 @@ function celebrate() {
 
 function renderShell(inner) {
   const lesson = currentLesson();
-  const subtitle = state.screen === "lessons" ? "Válassz leckét" : lesson.title;
+  const greeting = learnerGreeting();
+  const subtitle =
+    greeting ||
+    (state.screen === "lessons" ? "Válassz leckét" : lesson.title);
+  const detail = greeting
+    ? state.screen === "lessons"
+      ? "Válassz leckét"
+      : lesson.title
+    : "";
   const right =
     state.screen === "lessons"
-      ? `<div class="pill">${lessons.length} lecke</div>`
+      ? `<div class="top-actions">
+          <a class="home-link" href="index.html" aria-label="Főoldal">🏠</a>
+          <div class="pill">${lessons.length} lecke</div>
+        </div>`
       : state.screen === "activities"
         ? `<button class="back-button" data-action="lessons" aria-label="Vissza">←</button>`
         : `<button class="back-button" data-action="activities" aria-label="Vissza">←</button>`;
@@ -587,6 +612,7 @@ function renderShell(inner) {
           <div>
             <h1>Román szókaland</h1>
             <p>${subtitle}</p>
+            ${detail ? `<p class="brand-detail">${detail}</p>` : ""}
           </div>
         </div>
         ${right}
