@@ -218,6 +218,25 @@ const lessons = [
       { id: "camion", hu: "teherautó", ro: "camion", image: "Images/Camion.png", color: "#ef4444" },
     ],
   },
+  {
+    id: "pe-terenul-de-joaca-100",
+    title: "Pe terenul de joacă",
+    huTitle: "A játszótéren",
+    page: "#100",
+    sourceUrl:
+      "https://manuale.edu.ro/manuale/Clasa%20I/Comunicare%20in%20limba%20romana%20pentru%20scolile%20si%20sectiile%20cu%20predare%20in%20limba%20maghiara/RURJVFVSQSBDT1JWSU4g/#100",
+    color: "#8b5cf6",
+    cover: "Images/TerenJoacaP100.png",
+    coverSource: "Local",
+    words: [
+      { id: "leagan", hu: "hinta", ro: "leagăn", image: "Images/LeaganP100.png", color: "#84cc16" },
+      { id: "tobogan", hu: "csúszda", ro: "tobogan", image: "Images/ToboganP100.png", color: "#f59e0b" },
+      { id: "balansoar", hu: "hintaszék", ro: "balansoar", image: "Images/BalansoarP100.png", color: "#fb923c" },
+      { id: "trotineta", hu: "roller", ro: "trotinetă", image: "Images/TrotinetaP100.png", color: "#0ea5e9" },
+      { id: "coarda", hu: "ugrókötél", ro: "coardă", image: "Images/CoardaP100.png", color: "#ec4899" },
+      { id: "patine-cu-role", hu: "görkorcsolya", ro: "patine cu role", image: "Images/PatineCuRoleP100.png", color: "#facc15" },
+    ],
+  },
 ];
 
 const app = document.querySelector("#app");
