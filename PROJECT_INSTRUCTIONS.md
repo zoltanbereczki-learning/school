@@ -46,13 +46,18 @@ Manual source:
 https://manuale.edu.ro/manuale/Clasa%20I/Comunicare%20in%20limba%20romana%20pentru%20scolile%20si%20sectiile%20cu%20predare%20in%20limba%20maghiara/RURJVFVSQSBDT1JWSU4g/
 ```
 
-Current lessons in `app.js`:
+Current lessons in `app.js` (**newest first** on the lesson screen):
 
-- Page `#80`: `Casa și curtea bunicii`
+- Page `#100`: `Pe terenul de joacă`
+- Page `#92`: `Animale și plante din pădure`
 - Page `#91`: `Pădurea și animalele sălbatice`
+- Page `#80`: `Casa și curtea bunicii`
 - Page `#78`: `Să circulăm corect!`
+- Page `#77`: `Cu ce călătorim?`
 
-The `#80`, `#91`, and `#78` page badges in the lesson activity screen are clickable links to the manual pages.
+When adding a lesson, insert it at the **top** of the `lessons` array so it appears first for the child.
+
+Page badges in the lesson activity screen link to the manual pages.
 
 ## Current Vocabulary
 
@@ -118,7 +123,7 @@ Everything lives in `app.js`.
 
 The important top-level structures are:
 
-- `lessons`: array of lesson objects. Add new lessons here.
+- `lessons`: array of lesson objects. Add new lessons at the **beginning** of the array (newest on top in the UI).
 - `state`: current UI state, selected lesson, current game, progress, matching batch state.
 - `MATCH_BATCH_SIZE`: currently `5`; controls how many word pairs appear at once in the matching game.
 

@@ -2,11 +2,14 @@
 
 Use this guide when adding a new lesson to `Tanulj Romanul`.
 
-Currently integrated lessons:
+Currently integrated lessons (newest first in the app):
 
-- Page `#80`: `Casa și curtea bunicii`
+- Page `#100`: `Pe terenul de joacă`
+- Page `#92`: `Animale și plante din pădure`
 - Page `#91`: `Pădurea și animalele sălbatice`
+- Page `#80`: `Casa și curtea bunicii`
 - Page `#78`: `Să circulăm corect!`
+- Page `#77`: `Cu ce călătorim?`
 
 ## Goal
 
@@ -63,6 +66,8 @@ For manual asset discovery, downloads, cropping, cleanup, and contact-sheet chec
 ## Step 3: Add Lesson Data
 
 Open `app.js` and add a new object to the `lessons` array.
+
+**Lesson order:** put the **new lesson at the top** of the array (index `0`), so it appears first on the lesson selection screen. Older lessons stay below it. The list is not sorted automatically — order in `app.js` is the order on screen.
 
 Template:
 
@@ -121,7 +126,7 @@ file:///H:/My%20Drive/Csal%C3%A1d/Hunor/Huni%20Learning/Tanulj%20Romanul/tanuljr
 
 Check:
 
-- New lesson appears on the first screen.
+- New lesson appears **first** (top-left) on the lesson selection screen.
 - Lesson cover image is correct.
 - Page badge opens the manual page.
 - All three games work.
