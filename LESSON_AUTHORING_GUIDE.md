@@ -4,6 +4,7 @@ Use this guide when adding a new lesson to `Tanulj Romanul`.
 
 Currently integrated lessons (newest first in the app):
 
+- Page `#101`: `Parcul`
 - Page `#100`: `Pe terenul de joacă`
 - Page `#92`: `Animale și plante din pădure`
 - Page `#91`: `Pădurea și animalele sălbatice`

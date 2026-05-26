@@ -49,6 +49,7 @@ https://manuale.edu.ro/manuale/Clasa%20I/Comunicare%20in%20limba%20romana%20pent
 
 Current lessons in `app.js` (**newest first** on the lesson screen):
 
+- Page `#101`: `Parcul`
 - Page `#100`: `Pe terenul de joacă`
 - Page `#92`: `Animale și plante din pădure`
 - Page `#91`: `Pădurea și animalele sălbatice`
@@ -61,6 +62,29 @@ When adding a lesson, insert it at the **top** of the `lessons` array so it appe
 Page badges in the lesson activity screen link to the manual pages.
 
 ## Current Vocabulary
+
+### Parcul
+
+- `parc` - park
+- `lac` - tó
+- `copac` - fa
+- `tufiș` - bokor
+- `alee` - sétány
+- `strat cu flori` - virágágyás
+- `coș de gunoi` - szemetes
+
+Lesson `Parcul` (#101) also has a `sentences` array, so the **Kép - mondat** game is enabled.
+
+### Pe terenul de joacă
+
+- `leagăn` - hinta
+- `tobogan` - csúszda
+- `balansoar` - hintaszék
+- `trotinetă` - roller
+- `coardă` - ugrókötél
+- `patine cu role` - görkorcsolya
+
+Lesson `Pe terenul de joacă` (#100) also has a `sentences` array, so the **Kép - mondat** game is enabled.
 
 ### Casa și curtea bunicii
 
